@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Your News",
+  "name": "Selected News From New York Times",
   "icons": [
     {
       "src": "favicon.ico",

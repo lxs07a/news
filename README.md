@@ -1,3 +1,8 @@
+This single page application uses New York Times API to present the latest 10 news about a topic, along with a small summary and a link for each one, along with a search input. By default it
+loads the news related to one topic. Clicking on an item shows its summa-
+ry, along with an external link to the original article. The search input changes the news topic.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -9,12 +14,11 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches Jest, a Node-based runnertest runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`

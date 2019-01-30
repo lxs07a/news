@@ -1,0 +1,22 @@
+.navbar-dark .navbar-brand {
+  color: #d6d5d5;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar .icon {
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 13px 15px 13px 11px;
+  color:grey;
+}
