@@ -15,8 +15,22 @@ class AppNavbar extends Component {
     search: this.props.search,
   }
 
+  // store input from the search bar in state
   handleChange = (event) => {
-    this.props.updateSearch(event.target.value); 
+    this.setState({search: event.target.value})
+  }
+
+  // perform search when the search icon is pressed
+  performSearch = () => {
+    this.props.updateSearch(this.state.search)
+  }
+
+  // perform search when the Enter key is pressed
+  handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      this.props.updateSearch(this.state.search);
+    }
   }
 
 
@@ -26,7 +40,7 @@ class AppNavbar extends Component {
         <Navbar.Brand href="#home">
           <img
             src={logo}
-            className="d-inline-block align-top"
+            className="d-inline-block align-top nav-img"
             alt="News logo icon"
           />
         </Navbar.Brand>
@@ -38,8 +52,17 @@ class AppNavbar extends Component {
 
         <Form inline>
           <div className="search-bar">
-            <i className="icon fa fa-search"></i>
-            <FormControl name="search" type="text" placeholder={this.state.search} className="input-text" onChange={this.handleChange}></FormControl>
+             {/* opted against using a button class for styling purposes, 
+              used font awesome icon inside the search bar instead  */}
+            <i className="icon fa fa-search" onClick={this.performSearch}></i>
+            <FormControl 
+              name="search" 
+              type="text" 
+              placeholder={this.state.search} 
+              className="input-text" 
+              onChange={this.handleChange}
+              onKeyPress={this.handleKeyPress}
+              ></FormControl>
           </div>
         </Form>
       </Navbar>
