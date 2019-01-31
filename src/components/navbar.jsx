@@ -21,7 +21,7 @@ class AppNavbar extends Component {
   }
 
   // perform search when the search icon is pressed
-  performSearch = () => {
+  updateQuery = () => {
     this.props.updateSearch(this.state.search)
   }
 
@@ -29,7 +29,7 @@ class AppNavbar extends Component {
   handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      this.props.updateSearch(this.state.search);
+      this.props.updateSearch(event.target.value);
     }
   }
 
@@ -54,7 +54,7 @@ class AppNavbar extends Component {
           <div className="search-bar">
              {/* opted against using a button class for styling purposes, 
               used font awesome icon inside the search bar instead  */}
-            <i className="icon fa fa-search" onClick={this.performSearch}></i>
+            <i className="icon fa fa-search" onClick={this.updateQuery}></i>
             <FormControl 
               name="search" 
               type="text" 

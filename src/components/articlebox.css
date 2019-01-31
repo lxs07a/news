@@ -1,6 +1,51 @@
-.lulu {
-  background: lightgrey;
-  border: 8px solid white;
+.article-box {
+  background: #a9cad0;
+  border: 8px solid #a9cad0;
   border-radius: 25px;
-  padding: 10px;
+  position: relative;
+  min-height: 250px;
+}
+
+h5 {
+  color: white;
+}
+
+.headline {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: -webkit-linear-gradient(
+    rgba(8, 33, 43, 0),
+    rgba(8, 33, 43, 0.33),
+    rgba(8, 33, 43, 0.52),
+    rgba(8, 33, 43, 0.71),
+    rgba(8, 33, 43, 0.73),
+    rgba(8, 33, 43, 0.71),
+    rgba(8, 33, 43, 0.76),
+    rgba(8, 33, 43, 0.79),
+    rgba(8, 33, 43, 0.75),
+    rgba(8, 33, 43, 0.9));
+}
+
+.modal-content {
+  background-color: #a9cad0;
+  border-radius: 0.8rem;
+}
+
+.modal-header {
+  color: #a74b1c; 
+  text-align: center;
+}
+
+.modal-body {
+  color: #1e4857; 
+}
+
+a {
+  color: #a74b1c;
 }
