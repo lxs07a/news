@@ -22,7 +22,7 @@ class App extends Component {
 
   //use API to search New York Times
   performSearch = (query) => {
-    axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${config.APIkey}`)
+    axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${process.env.APIkey}`)
     
     //store the result in state
     .then(res => {
