@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import logo from '../logo.svg';
+import React, { Component } from 'react';
+import logo from '../../logo.svg';
 
 //import only necessary components from bootstrap 
 //to reduce the amount of code sent to client

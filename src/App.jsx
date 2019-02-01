@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import AppNavbar from './components/navbar';
-import ArticleList from './components/articlelist';
+import AppNavbar from './components/navbar/navbar';
+import ArticleList from './components/articlelist/articlelist';
 
 //store API key in config file for security
-// import config from "./config.json"
+import config from "./config.json"
 
 
 class App extends Component {
@@ -22,11 +22,10 @@ class App extends Component {
 
   //use API to search New York Times
   performSearch = (query) => {
-    axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=4I25jyr5httQkpuGjPsBBk4i6Jp6RXPX`)
+    axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${config.APIkey}`)
     
     //store the result in state
     .then(res => {
-      // debugger
       this.setState({articles: res.data.response.docs});
     })
     .catch(error => {

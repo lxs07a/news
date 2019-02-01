@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal'
-// import Button from 'react-bootstrap/Button'
-
 import './articlebox.css';
 
 class ArticleBox extends Component {
@@ -40,22 +38,24 @@ class ArticleBox extends Component {
         <Col lg={3} md={4} sm={6} xs={12} className="article-box"
           onClick={this.handleShow}
           style={styling}>
-
-            {/* <Link to={'/itempage/'+ this.props.title} title={this.props.title}> */}
-                <div className="headline">
-                  <h5>{this.props.title}</h5>
-                  {/* <h5>Preview</h5> */}
-                </div>
-
-          {/* </Link> */}
+          <div className="headline">
+            <h5>{this.props.title}</h5>
+          </div>
         </Col>
+        
+        {/* when the aricle box is clicked, show a pop-up with summary and link */}
         <Modal show={this.state.show} onHide={this.handleHide}>
           <Modal.Header closeButton>
             <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>{this.props.summary}</Modal.Body>
           <Modal.Footer>
-            <a href={this.props.url} target="_blank" rel="noopener noreferrer" onClick={this.handleHide}>Read it on New York Times</a>
+            <a href={this.props.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={this.handleHide}>
+              Read it on New York Times
+            </a>
           </Modal.Footer>
         </Modal>
       </>
