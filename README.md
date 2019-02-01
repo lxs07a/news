@@ -1,5 +1,8 @@
 This single page application uses New York Times API to present the latest 10 news about a topic as well as a search bar to select a new topic. By default it loads the news related to Amsterdam. Clicking on an article box shows its summary, along with an external link to the original article.<br><br>
 
+See the deployed version here: https://bhnews.herokuapp.com/
+<br><br>
+
 Architectural decisions:<br> 
 React and Node.js were chosen for their speed, scalability, and simplicity of use for SPAs.<br>
 Code splitting was used to reuse components and to load only the necessary modules at runtime. <br>
