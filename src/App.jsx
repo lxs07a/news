@@ -5,7 +5,7 @@ import AppNavbar from './components/navbar';
 import ArticleList from './components/articlelist';
 
 //store API key in config file for security
-import config from "./config.json"
+// import config from "./config.json"
 
 
 class App extends Component {
