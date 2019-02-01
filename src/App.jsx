@@ -8,7 +8,6 @@ import ArticleList from './components/articlelist';
 import config from "./config.json"
 
 
-
 class App extends Component {
 
   state = {
