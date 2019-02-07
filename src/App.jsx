@@ -34,21 +34,9 @@ class App extends Component {
   }
 
   
+  //search for default topic specified in state
   componentDidMount () {
-
-    //search for default topic specified in state
     this.performSearch(this.state.search);
-
-    //ping every 5 minutes to prevent the app from idling
-    setInterval(() => 
-      axios.get('https://bhnews.herokuapp.com/')
-      .then(res => {
-        console.log("Ping! res is " + res)
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    , 5*60*1000);
   }
 
 
